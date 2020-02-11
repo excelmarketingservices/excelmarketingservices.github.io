@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900);
+
+#home-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/img/office-1.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+
+#home-img h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  /* white-space: nowrap; */
+}
+
+#what-we-do h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: fit-content;
+  padding-top: 15px;
+  border-bottom: 5px #0069ff solid;
+  text-transform: uppercase;
+}
+
+#what-we-do p {
+  margin: 15px;
+}
+
+#what-we-offer {
+  background: #424242;
+  color: #ffffff;
+}
+
+#what-we-offer h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: fit-content;
+  border-bottom: 5px #0069ff solid;
+  padding-top: 15px;
+  text-transform: uppercase;
+  margin-left: auto;
+}
+
+#what-we-offer #products {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 600px) {
+  #home-img h1 {
+    font-size: 3rem;
+  }
+
+  #what-we-offer #products {
+    display: block;
+    /* justify-content: center; */
+  }
+
+  .ProductCard {
+    /* display: flex; */
+    justify-content: center;
+  }
+}
