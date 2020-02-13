@@ -29,7 +29,6 @@
   max-width: fit-content;
   padding-top: 15px;
   border-bottom: 5px #0069ff solid;
-  text-transform: uppercase;
 }
 
 #what-we-do p {
@@ -46,27 +45,11 @@
   max-width: fit-content;
   border-bottom: 5px #0069ff solid;
   padding-top: 15px;
-  text-transform: uppercase;
   margin-left: auto;
-}
-
-#what-we-offer #products {
-  display: flex;
-  justify-content: space-around;
 }
 
 @media only screen and (max-width: 600px) {
   #home-img h1 {
     font-size: 3rem;
-  }
-
-  #what-we-offer #products {
-    display: block;
-    /* justify-content: center; */
-  }
-
-  .ProductCard {
-    /* display: flex; */
-    justify-content: center;
   }
 }

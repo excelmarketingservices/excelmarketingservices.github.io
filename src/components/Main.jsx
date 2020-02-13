@@ -1,54 +1,45 @@
 import React, { Component } from "react";
 import "./Main.css";
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import Product from "./Product.jsx";
+import Contact from "./Contact.jsx";
 
 class Main extends Component {
   render() {
+    const products = [
+      { link: "https://via.placeholder.com/200", description:"Film to protect your glass.", name: "Safety Film" },
+      { link: "https://via.placeholder.com/200", description:"Film to protect from sunlight.", name: "Sun Control Film" },
+      { link: "https://via.placeholder.com/200", description:"Film with design.", name: "Glass Etch  Film" },
+      { link: "https://via.placeholder.com/200", description:"Vinyl Film", name: "Vinyl Film" }
+    ];
+
+    let productsRow = products.map(product => (
+      <Product link={product.link} name={product.name} description={product.description} />
+    ));
+
     return (
       <div>
         <div id="home-img">
           <h1>Excel Marketing Services</h1>
         </div>
-        <div id="what-we-do">
-          <Container>
-            <h2>What we do</h2>
-            <p>
+        <Container fluid className="p-3 px-5">
+          <div id="what-we-do">
+            <h2 className="text-uppercase">What we do</h2>
+            <p className="mx-0">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Exercitationem quidem dolorum praesentium nam atque officiis iste
               nihil. Aperiam explicabo error, numquam ullam nostrum, architecto
               labore quod porro, accusantium in eos?
             </p>
-          </Container>
-        </div>
+          </div>
+        </Container>
         <div id="what-we-offer">
-          <Container>
-            <h2>What we offer</h2>
-            <div id="products">
-              <Product
-                link="https://via.placeholder.com/200"
-                name="Safety Film"
-              />
-              <Product
-                link="https://via.placeholder.com/200"
-                name="Sun Control Film"
-              />
-              <Product
-                link="https://via.placeholder.com/200"
-                name="Glass Etch Film"
-              />
-              <Product
-                link="https://via.placeholder.com/200"
-                name="Vinyl Film"
-              />
-            </div>
+          <Container fluid className="">
+            <h2 className="mr-3 text-uppercase">What we offer</h2>
+            <Row className="justify-content-center">{productsRow}</Row>
           </Container>
         </div>
-        <div id="contact-us">
-            <Container>
-                <h6>Phone Number</h6>
-            </Container>
-        </div>
+        <Contact />
       </div>
     );
   }
